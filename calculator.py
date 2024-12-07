@@ -131,7 +131,7 @@ def matrix_multiplication():
     return np.dot(matrix1, matrix2)
 
 def plot_graph():
-    # Step 1: Get user input for the mathematical function
+    # Get the graph of f(x) into SymPy expression
     x = sym.symbols("x")
     user_input = input("Enter a function f(x) (e.g., x**2, sin(x), 5*x + 3): ")
 
