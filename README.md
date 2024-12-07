@@ -1,4 +1,6 @@
-This is a very basic project
+# Graph Builder and Calculator
+#### Video Demo:  <URL HERE>
+#### Description:
 My intro to coding projection essentially and to get some experience with 
 re's, numpy, sympy, matplotlib
 
