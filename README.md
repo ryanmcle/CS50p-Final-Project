@@ -1,5 +1,5 @@
 # Graph Builder and Calculator
-#### Video Demo:  <URL HERE>
+#### Video Demo:  <https://youtu.be/p3nvx03wYuk>
 #### Description:
 My intro to coding projection essentially and to get some experience with 
 re's, numpy, sympy, matplotlib
