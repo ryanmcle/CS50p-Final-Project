@@ -9,7 +9,7 @@ def main():
     # User decides what they would like to do
     user_input = input("Arithmetic - A, Trigonmetrics - T?, Matrices - M, Graphs - G? ").strip().lower()
 
-    # Switch to dictate what they will do 
+    # Switch to dictate what they will do
     match(user_input):
         case "a":
             input_a = input("Type in the sum format \"x +/- y +- z...\"")
@@ -28,7 +28,7 @@ def main():
                     print(matrix_addition(mat_type))
 
                 case "multiply":
-                    print(matrix_multiplication(mat_type))
+                    print(matrix_multiplication())
         case "g":
             plot_graph()
 
@@ -36,21 +36,27 @@ def arithmetic(sum):
     sumlst = sum.split(" ")
     print(sumlst)
 
-    i=0
+    i = 0
     # Handle multiplication first
     while i < len(sumlst) - 1:
         if sumlst[i] == "*":
             multiplication = float(sumlst[i-1]) * float(sumlst[i+1])
             sumlst[i] = multiplication
-            
-            # Remove the numbers to the right and left of the new number 
             sumlst.pop(i-1)
             sumlst.pop(i)
             print(sumlst)
 
         i += 1
 
-
+    i = 0
+    while i < len(sumlst) - 1:
+        if sumlst[i] == "/":
+            division = float(sumlst[i-1]) / float(sumlst[i+1])
+            sumlst[i] = division
+            sumlst.pop(i-1)
+            sumlst.pop(i)
+            print(sumlst)
+        i += 1
     i = 0
     number = 0
     while i <= len(sumlst) - 1:
@@ -131,7 +137,7 @@ def matrix_multiplication():
     return np.dot(matrix1, matrix2)
 
 def plot_graph():
-    # Get the graph of f(x) into SymPy expression
+    # Get the user input of the f(x)
     x = sym.symbols("x")
     user_input = input("Enter a function f(x) (e.g., x**2, sin(x), 5*x + 3): ")
 
